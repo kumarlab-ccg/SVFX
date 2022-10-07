@@ -1,0 +1,41 @@
+run_id: real_data_run
+
+coordinates:
+  control: /mnt/c/Users/Yumika/Downloads/SVFX-master/SVFX-master/data/control500_coords.txt
+  disease: /mnt/c/Users/Yumika/Downloads/SVFX-master/SVFX-master/data/clinVarDel500.bed
+
+matrix_params:
+  bigwig_files:
+    - /mnt/c/Users/Yumika/Downloads/SVFX-master/SVFX-master/data/28736.Roadmap.SRS004212_Combined_Libraries_424.WGB-Seq.signal.bigWig
+    - /mnt/c/Users/Yumika/Downloads/SVFX-master/SVFX-master/data/E003-DNase.pval.signal.bigwig
+    - /mnt/c/Users/Yumika/Downloads/SVFX-master/SVFX-master/data/E003-H3K4me1.pval.signal.bigwig
+    - /mnt/c/Users/Yumika/Downloads/SVFX-master/SVFX-master/data/E003-H3K4me3.pval.signal.bigwig
+    - /mnt/c/Users/Yumika/Downloads/SVFX-master/SVFX-master/data/E003-H3K9me3.pval.signal.bigwig
+    - /mnt/c/Users/Yumika/Downloads/SVFX-master/SVFX-master/data/E003-H3K27ac.pval.signal.bigwig
+    - /mnt/c/Users/Yumika/Downloads/SVFX-master/SVFX-master/data/E003-H3K27me3.pval.signal.bigwig
+    - /mnt/c/Users/Yumika/Downloads/SVFX-master/SVFX-master/data/E003-H3K36me3.pval.signal.bigwig
+  overlap_coordinate_files:
+    - /mnt/c/Users/Yumika/Downloads/SVFX-master/SVFX-master/data/gc19_pc.3utr.nr.bed
+    - /mnt/c/Users/Yumika/Downloads/SVFX-master/SVFX-master/data/gc19_pc.5utr.nr.bed
+    - /mnt/c/Users/Yumika/Downloads/SVFX-master/SVFX-master/data/gc19_pc.cds.nr.bed
+    - /mnt/c/Users/Yumika/Downloads/SVFX-master/SVFX-master/data/gc19_pc.prom.nr.bed
+    - /mnt/c/Users/Yumika/Downloads/SVFX-master/SVFX-master/data/gc19_pc.ss.nr.bed
+    - /mnt/c/Users/Yumika/Downloads/SVFX-master/SVFX-master/data/H1-ESC_Dixon2015-raw_TADs.bed
+    - /mnt/c/Users/Yumika/Downloads/SVFX-master/SVFX-master/data/sensitive.nc.bed
+    - /mnt/c/Users/Yumika/Downloads/SVFX-master/SVFX-master/data/ultra.conserved.hg19.bed
+    - /mnt/c/Users/Yumika/Downloads/SVFX-master/SVFX-master/data/wgEncodeBroadHmmGm12878HMM.Heterochrom.bed
+  normalized: True
+  variant_type: DEL
+  ref_genome: /mnt/c/Users/Yumika/Downloads/SVFX-master/SVFX-master/data/hg19.fa.fai
+  randomized_num: 5
+
+output_matrix:
+  control: /mnt/c/Users/Yumika/Downloads/SVFX-master/SVFX-master/data/control_matrix
+  disease: /mnt/c/Users/Yumika/Downloads/SVFX-master/SVFX-master/data/disease_matrix
+
+model_params:
+  columns_to_remove: /mnt/c/Users/Yumika/Downloads/SVFX-master/SVFX-master/remove_inds.txt
+  class_label_index: 0
+  num_trees: 150
+  max_depth: 100
+  min_samples_split: 5
